@@ -28,6 +28,16 @@ do
 			echo "BBye!" | tee pipe
 			exit
 			;;
+		ls)
+			tee pipe 1>/dev/null <<EOF
+			File 1
+			file 2
+			file 3
+			folder 1
+			dir 2
+EOF
+			;;
+
 		*)
 			echo "Invalid" > pipe
 	esac

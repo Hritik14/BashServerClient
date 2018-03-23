@@ -32,7 +32,7 @@ do
 	echo "Request: "
 	read request
 	echo $request > pipe
-	read response < pipe
+	response=$(<pipe)
 	echo "[S] $response"
 done
 
